@@ -28,6 +28,8 @@ export const resetPwd = async ({ commit }, data) => {
       requestType: "PASSWORD_RESET",
       email,
     });
+    debugger;
+    console.log(data);
     return { ok: true };
   } catch (Ex) {
     console.log("resetPwd: " + Ex.message);
@@ -36,7 +38,6 @@ export const resetPwd = async ({ commit }, data) => {
 };
 
 export const checkAuthentication = async ({ commit }) => {
-  debugger;
   const idToken = localStorage.getItem("idToken");
   const refreshToken = localStorage.getItem("refreshToken");
 

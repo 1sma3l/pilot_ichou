@@ -101,8 +101,7 @@ export default defineComponent({
   setup() {
     const leftDrawerOpen = ref(false);
     const router = useRouter();
-    const { logout } = useAuth();
-    const username = ref("Ismael Díaz");
+    const { username, logout } = useAuth();
 
     return {
       username,

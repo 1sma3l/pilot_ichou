@@ -1,4 +1,6 @@
 import { useStore } from "vuex";
+import { computed } from "vue";
+
 const useAuth = () => {
   const store = useStore();
   const loginUser = async (user) => {
@@ -17,6 +19,9 @@ const useAuth = () => {
   return {
     loginUser,
     resetPwd,
+    logout,
+
+    username: computed(() => store.getters["auth/username"]), //Obtengo el nombre del usuario del state, mediante un getter
   };
 };
 

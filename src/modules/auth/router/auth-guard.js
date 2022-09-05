@@ -1,7 +1,6 @@
 import useStore from "src/store";
 
 const isAuthenticatedGuard = async (to, from, next) => {
-  debugger;
   const store = useStore();
   console.log(to, from);
   //disparo la accion, para que ejecute el checkAuthentication
